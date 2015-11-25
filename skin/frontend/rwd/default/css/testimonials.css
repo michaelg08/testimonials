@@ -1,0 +1,69 @@
+/**
+ * @category    design
+ * @package     UIS_Testimonials
+ * @copyright   Copyright (c) 2015 Husak Mykhailo
+ * @license     All Rights Reserved
+ */
+
+.testimonial {
+	border: 1px solid #cccccc;
+	margin: 10px;
+}
+
+.customer_name {
+	width: 20%;
+    float: left;
+    font-weight: bold;
+}
+
+.testimonial_label {
+    width: 80%;
+    border-bottom: 1px solid #3399cc;
+    float: left;
+	padding-left: 20px;
+	background: #cccccc;
+}
+
+.feedback_text {
+    margin-top: 30px;
+    clear: left;
+}
+
+.feedback_text span {
+	margin-left: 15%;
+    padding-top: 10px;
+	padding-left: 80px;
+}
+
+.quotemark {
+	width: 25px;
+    background: url(../images/quote.png);
+    background-size: cover;
+    height: 20px;
+    float: right;
+}
+.testimonial_button {
+	
+}
+
+.testimonial_button button {
+    width: 200px;
+	height: 30px;
+	background: #3399cc;
+    display: inline-block;
+    padding: 7px 15px;
+    border: 0;
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: normal;
+    font-family: "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
+    line-height: 19px;
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.bottom_clearer {
+  height: 20px; 
+}
