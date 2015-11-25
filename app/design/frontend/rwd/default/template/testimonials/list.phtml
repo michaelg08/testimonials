@@ -1,0 +1,26 @@
+<?php 
+	$testimonialsCollection = $this->getTestimonials();
+?>
+
+<h4><?php echo $this->__(Testimonials); ?></h4>
+<?php foreach ($testimonialsCollection as $testimonial): ?>
+	<?php if ($testimonial->canShow()): ?>
+	<div class="testimonial">
+		<div class="customer_name">
+			<span><?php echo $testimonial->getCustomerName(); ?> </span>
+			<div class="quotemark"></div>
+		</div>
+		<div class="testimonial_label">
+			<span><?php echo $testimonial->getTestimonialLabel(); ?> </span>
+		</div>
+		<div class="feedback_text">
+			<span><?php echo $testimonial->getTestimonialText(); ?> </span>
+		</div>
+	</div>
+	<?php endif; ?>
+<?php endforeach;?>
+<div class="testimonial_button">
+	<button type="button" onClick="location.href='<?php echo $this->getBaseUrl()?>testimonials/index/add'" >
+		<span><?php echo $this->__('Add new testimonial');  ?></span>
+	</button>
+</div>

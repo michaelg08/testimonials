@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+  <testimonials_admin_testimonialsadmin_index>
+	<reference name="content">
+	  <block type="testimonials/adminhtml_testimonials_testimonials" name="admin.testimonials" />
+	</reference>
+  </testimonials_admin_testimonialsadmin_index>
+	<testimonials_admin_testimonialsadmin_edit>
+		<reference name="content">
+			<block type="testimonials/adminhtml_testimonials_edit" name="admin.testimonials.edit" />
+		</reference>
+	</testimonials_admin_testimonialsadmin_edit>
+	<testimonials_admin_testimonialsadmin_new>
+		<reference name="content">
+			<block type="testimonials/adminhtml_testimonials_edit" name="admin.testimonials.edit" />
+		</reference>
+	</testimonials_admin_testimonialsadmin_new>
+</layout>

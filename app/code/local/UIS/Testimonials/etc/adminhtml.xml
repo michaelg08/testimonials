@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+
+<!-- /** 
+     * Configures an additional menu point in the navigation bar of the 
+     * adimistration backend. 
+     * @category UIS
+     * @package UIS_Testimonials
+     * @copyright Copyright (c) 2015 Husak Mykhailo
+* */ -->
+
+<config>
+    <menu>
+        <testimonials module="testimonials">
+            <title>Testimonials</title>
+            <sort_order>999</sort_order>              
+            <children>
+                <items module="testimonials">
+                    <title>Manage Testimonials</title>
+                    <sort_order>0</sort_order>
+                    <action>testimonials_admin/testimonialsadmin/index</action>
+                </items>
+            </children>
+        </testimonials>
+    </menu>
+    <acl>
+        <resources>
+            <all>
+                <title>Allow Everything</title>
+            </all>
+            <admin>
+                <children>
+                    <testimonials>
+                        <title>Testimonials Module</title>
+                        <sort_order>1</sort_order>
+                    </testimonials>
+                </children>
+            </admin>
+        </resources>  
+    </acl>
+</config> 

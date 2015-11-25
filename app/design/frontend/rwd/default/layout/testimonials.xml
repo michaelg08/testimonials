@@ -1,0 +1,41 @@
+<?xml version="1.0"?>   
+<layout version="0.0.1">   
+
+<default> 
+   <reference name="top.links">
+   		<action method="addLink" translate="label title">
+			<label>Testimonials</label>
+			<url>testimonials/index</url>
+			<title>My link tooltip</title>
+			<prepare>true</prepare>
+			<position>150</position>
+		</action>
+	</reference>	
+</default> 
+  
+  <testimonials_index_index>   
+    <reference name="root">   
+      <action method="setTemplate"><template>page/1column.phtml</template></action>   
+    </reference> 
+	<reference name="head">
+        <action method="addItem"><type>skin_css</type><name>css/testimonials.css</name></action>
+    </reference>	
+    <reference name="content">   
+      <block type="testimonials/list" name="testimonials_list" template="testimonials/list.phtml"/>   
+    </reference>   
+  </testimonials_index_index>   
+  
+  <testimonials_index_add>   
+  	<reference name="root">   
+       <remove name="right"/>
+    </reference> 
+	<reference name="head">
+        <action method="addItem"><type>skin_css</type><name>css/testimonials.css</name></action>
+    </reference>	
+    <reference name="content">   
+      <block type="testimonials/addform" name="testimonials_addform" template="testimonials/addform.phtml"/>   
+    </reference>   
+  </testimonials_index_add>  
+  
+</layout>   
+	

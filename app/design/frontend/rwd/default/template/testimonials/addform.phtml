@@ -1,0 +1,54 @@
+<?php 
+$customer = Mage::getSingleton('customer/session')->getCustomer();
+?>
+
+<form action="<?php echo $this->getUrl('testimonials/index/save') ?>" method="post" autocomplete="off" id="form-validate" class="scaffold-form">
+	<div class="fieldset">
+		<input type="hidden" name="customer_id" value="<?php echo $customer->getEntityId(); ?>">
+		<p class="form-instructions">Please enter the following information</p>
+		<p class="required">* Required Fields</p>
+		<ul class="form-list">
+			<li class="fields">
+				<div class="testimonial-fields">
+					<div class="field customer-name">
+						<label for="customer-name" class="required"><em>*</em>Name</label>
+						<div class="input-box">
+							<input type="text" id="customer-name" name="customer-name" value="<?php echo $customer->getFirstname(); ?>" title="Name" maxlength="255" class="input-text required-entry">
+						</div>
+					</div>
+					<div class="field customer-email">
+						<label for="customer-email" class="required"><em>*</em>Email</label>
+						<div class="input-box">
+							<input type="text" id="customer-email" name="customer-email" value="<?php echo $customer->getEmail() ?>" title="Email" maxlength="255" class="input-text required-entry">
+						</div>
+					</div>
+					<div class="field testimonial-lable">
+						<label for="testimonial-lable" class="required">Short lable for feedback</label>
+						<div class="input-box">
+							<input type="text" id="testimonial-lable" name="testimonial-lable" value="" title="Feedback lable" class="input-text required-entry">
+						</div>
+					</div>
+					<div class="field testimonial-feedback-text">
+						<label for="testimonial-feedback-text" class="required"><em>*</em>Feedback text</label>
+						<div class="input-box">
+							<textarea rows='10' cols='100' id="testimonial-feedback-text" name="testimonial-feedback-text" value="" title="Feedback text" class="input-text required-entry"></textarea>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+		<div class="buttons-set">
+			<button type="submit" title="Submit" class="button"><span><span>Submit</span></span></button>
+		</div>
+</form>
+
+<div class="bottom_clearer"></div>
+
+<script type="text/javascript">
+//<![CDATA[
+	var dataForm = new VarienForm('form-validate', true);
+//]]>
+</script>
+
+
+
